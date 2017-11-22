@@ -11775,7 +11775,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#In Jupyter notebooks, you will need to run this command before doing any plotting</span>
@@ -11800,26 +11800,10 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">limit_gpu_mem</span><span class="p">()</span>
@@ -11832,7 +11816,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#path = &quot;data/dogscats/&quot;</span>
@@ -11848,7 +11832,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch_size</span><span class="o">=</span><span class="mi">25</span>
@@ -11862,7 +11846,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Prepare images for training in batches</span>
@@ -11885,8 +11869,8 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Found 125 images belonging to 2 classes.
-Found 18 images belonging to 2 classes.
+<pre>Found 113 images belonging to 2 classes.
+Found 16 images belonging to 2 classes.
 </pre>
 </div>
 </div>
@@ -11908,7 +11892,7 @@ Found 18 images belonging to 2 classes.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create the base pre-trained model</span>
@@ -12614,7 +12598,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add a global spatial average pooling layer</span>
@@ -12637,7 +12621,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># this is the model we will train</span>
@@ -12651,7 +12635,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># first: train only the top layers (which were randomly initialized)</span>
@@ -13654,7 +13638,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># compile the model (should be done *after* setting layers to non-trainable)</span>
@@ -13668,35 +13652,10 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>
-<span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ReduceLROnPlateau</span>
-
-<span class="k">class</span> <span class="nc">EarlyStoppingByLossVal</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">monitor</span> <span class="o">=</span> <span class="n">monitor</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
-
-    <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
-        <span class="n">current</span> <span class="o">=</span> <span class="n">logs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">monitor</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Early stopping requires </span><span class="si">%s</span><span class="s2"> available!&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">monitor</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">current</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Epoch </span><span class="si">%05d</span><span class="s2">: early stopping THR&quot;</span> <span class="o">%</span> <span class="n">epoch</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">stop_training</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">EarlyStoppingByLossVal</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-    <span class="n">ReduceLROnPlateau</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
-             <span class="n">patience</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
-    <span class="c1"># EarlyStopping(monitor=&#39;val_loss&#39;, patience=2, verbose=0),</span>
-    <span class="c1">#ModelCheckpoint(kfold_weights_path, monitor=&#39;val_loss&#39;, save_best_only=True, verbose=0),</span>
-<span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
 </div>
@@ -13706,11 +13665,11 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">batches</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="n">no_of_epochs</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-               <span class="n">validation_data</span><span class="o">=</span><span class="n">val_batches</span><span class="p">,</span> <span class="n">validation_steps</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">batches</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="n">no_of_epochs</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+               <span class="n">validation_data</span><span class="o">=</span><span class="n">val_batches</span><span class="p">,</span> <span class="n">validation_steps</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13726,35 +13685,35 @@ True
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/15
-2s - loss: 0.3733 - acc: 0.8800 - val_loss: 0.3537 - val_acc: 0.8889
+8/8 [==============================] - ETA: 2s - loss: 0.0109 - acc: 1.000 - ETA: 1s - loss: 0.0220 - acc: 1.000 - ETA: 1s - loss: 0.0194 - acc: 1.000 - ETA: 1s - loss: 0.0939 - acc: 0.950 - ETA: 0s - loss: 0.0841 - acc: 0.960 - ETA: 0s - loss: 0.0780 - acc: 0.960 - ETA: 0s - loss: 0.0761 - acc: 0.965 - 2s - loss: 0.0878 - acc: 0.9645 - val_loss: 0.2206 - val_acc: 0.8750
 Epoch 2/15
-1s - loss: 0.3408 - acc: 0.8400 - val_loss: 0.3791 - val_acc: 0.8333
+8/8 [==============================] - ETA: 2s - loss: 0.0154 - acc: 1.000 - ETA: 1s - loss: 0.0190 - acc: 1.000 - ETA: 1s - loss: 0.0198 - acc: 1.000 - ETA: 1s - loss: 0.0461 - acc: 1.000 - ETA: 0s - loss: 0.0519 - acc: 1.000 - ETA: 0s - loss: 0.0442 - acc: 1.000 - ETA: 0s - loss: 0.0391 - acc: 1.000 - 3s - loss: 0.0345 - acc: 1.0000 - val_loss: 0.2609 - val_acc: 0.8750
 Epoch 3/15
-2s - loss: 0.1041 - acc: 0.9600 - val_loss: 0.8083 - val_acc: 0.6667
+8/8 [==============================] - ETA: 1s - loss: 0.0458 - acc: 1.000 - ETA: 1s - loss: 0.0239 - acc: 1.000 - ETA: 1s - loss: 0.0178 - acc: 1.000 - ETA: 1s - loss: 0.0139 - acc: 1.000 - ETA: 0s - loss: 0.0114 - acc: 1.000 - ETA: 0s - loss: 0.0099 - acc: 1.000 - ETA: 0s - loss: 0.0087 - acc: 1.000 - 2s - loss: 0.0076 - acc: 1.0000 - val_loss: 0.2717 - val_acc: 0.8750
 Epoch 4/15
-1s - loss: 0.0889 - acc: 0.9800 - val_loss: 0.2407 - val_acc: 0.8889
+8/8 [==============================] - ETA: 2s - loss: 0.0014 - acc: 1.000 - ETA: 1s - loss: 0.0015 - acc: 1.000 - ETA: 1s - loss: 0.0253 - acc: 0.974 - ETA: 1s - loss: 0.0194 - acc: 0.980 - ETA: 0s - loss: 0.0293 - acc: 0.976 - ETA: 0s - loss: 0.0254 - acc: 0.980 - ETA: 0s - loss: 0.0219 - acc: 0.983 - 2s - loss: 0.0190 - acc: 0.9857 - val_loss: 0.3452 - val_acc: 0.9375
 Epoch 5/15
-2s - loss: 0.0919 - acc: 0.9800 - val_loss: 0.2907 - val_acc: 0.8333
+8/8 [==============================] - ETA: 2s - loss: 0.0010 - acc: 1.000 - ETA: 1s - loss: 0.0012 - acc: 1.000 - ETA: 1s - loss: 0.0012 - acc: 1.000 - ETA: 1s - loss: 0.0015 - acc: 1.000 - ETA: 0s - loss: 0.0013 - acc: 1.000 - ETA: 0s - loss: 0.0020 - acc: 1.000 - ETA: 0s - loss: 0.0021 - acc: 1.000 - 3s - loss: 0.0022 - acc: 1.0000 - val_loss: 0.3209 - val_acc: 0.8750
 Epoch 6/15
-2s - loss: 0.0349 - acc: 1.0000 - val_loss: 0.5723 - val_acc: 0.7778
+8/8 [==============================] - ETA: 2s - loss: 3.3049e-04 - acc: 1.000 - ETA: 1s - loss: 2.9087e-04 - acc: 1.000 - ETA: 1s - loss: 3.1460e-04 - acc: 1.000 - ETA: 1s - loss: 0.0019 - acc: 1.0000    - ETA: 0s - loss: 0.0017 - acc: 1.000 - ETA: 0s - loss: 0.0016 - acc: 1.000 - ETA: 0s - loss: 0.0014 - acc: 1.000 - 2s - loss: 0.0013 - acc: 1.0000 - val_loss: 0.2923 - val_acc: 0.8750
 Epoch 7/15
-2s - loss: 0.0384 - acc: 1.0000 - val_loss: 0.3539 - val_acc: 0.8333
+8/8 [==============================] - ETA: 2s - loss: 3.0189e-04 - acc: 1.000 - ETA: 1s - loss: 2.2361e-04 - acc: 1.000 - ETA: 1s - loss: 0.0019 - acc: 1.0000    - ETA: 1s - loss: 0.0059 - acc: 1.000 - ETA: 0s - loss: 0.0052 - acc: 1.000 - ETA: 0s - loss: 0.0046 - acc: 1.000 - ETA: 0s - loss: 0.0040 - acc: 1.000 - 3s - loss: 0.0034 - acc: 1.0000 - val_loss: 0.3684 - val_acc: 0.8750
 Epoch 8/15
-2s - loss: 0.0270 - acc: 0.9900 - val_loss: 0.2530 - val_acc: 0.8889
+8/8 [==============================] - ETA: 1s - loss: 0.0257 - acc: 1.000 - ETA: 1s - loss: 0.0176 - acc: 1.000 - ETA: 1s - loss: 0.0119 - acc: 1.000 - ETA: 1s - loss: 0.0090 - acc: 1.000 - ETA: 0s - loss: 0.0075 - acc: 1.000 - ETA: 0s - loss: 0.0063 - acc: 1.000 - ETA: 0s - loss: 0.0055 - acc: 1.000 - 2s - loss: 0.0047 - acc: 1.0000 - val_loss: 0.3617 - val_acc: 0.8750
 Epoch 9/15
-2s - loss: 0.0407 - acc: 0.9900 - val_loss: 0.3031 - val_acc: 0.9444
+8/8 [==============================] - ETA: 2s - loss: 9.8576e-05 - acc: 1.000 - ETA: 1s - loss: 0.0153 - acc: 1.0000    - ETA: 1s - loss: 0.0103 - acc: 1.000 - ETA: 1s - loss: 0.0077 - acc: 1.000 - ETA: 0s - loss: 0.0062 - acc: 1.000 - ETA: 0s - loss: 0.0056 - acc: 1.000 - ETA: 0s - loss: 0.0050 - acc: 1.000 - 2s - loss: 0.0051 - acc: 1.0000 - val_loss: 0.4150 - val_acc: 0.8750
 Epoch 10/15
-2s - loss: 0.0212 - acc: 0.9900 - val_loss: 0.3342 - val_acc: 0.8889
+8/8 [==============================] - ETA: 2s - loss: 1.1075e-04 - acc: 1.000 - ETA: 1s - loss: 4.1726e-04 - acc: 1.000 - ETA: 1s - loss: 2.9006e-04 - acc: 1.000 - ETA: 1s - loss: 3.4657e-04 - acc: 1.000 - ETA: 0s - loss: 0.0604 - acc: 0.9692    - ETA: 0s - loss: 0.0506 - acc: 0.974 - ETA: 0s - loss: 0.0453 - acc: 0.978 - 3s - loss: 0.0491 - acc: 0.9767 - val_loss: 1.2856 - val_acc: 0.6875
 Epoch 11/15
-2s - loss: 0.0130 - acc: 1.0000 - val_loss: 0.4948 - val_acc: 0.8333
+8/8 [==============================] - ETA: 2s - loss: 0.5985 - acc: 0.680 - ETA: 1s - loss: 0.2993 - acc: 0.840 - ETA: 1s - loss: 0.1996 - acc: 0.893 - ETA: 1s - loss: 0.1549 - acc: 0.920 - ETA: 0s - loss: 0.1292 - acc: 0.936 - ETA: 0s - loss: 0.1399 - acc: 0.933 - ETA: 0s - loss: 0.2234 - acc: 0.909 - 2s - loss: 0.1974 - acc: 0.9166 - val_loss: 0.7293 - val_acc: 0.7500
 Epoch 12/15
-2s - loss: 0.0290 - acc: 1.0000 - val_loss: 0.3678 - val_acc: 0.8889
+8/8 [==============================] - ETA: 2s - loss: 0.0026 - acc: 1.000 - ETA: 1s - loss: 0.0026 - acc: 1.000 - ETA: 1s - loss: 0.0024 - acc: 1.000 - ETA: 1s - loss: 0.0060 - acc: 1.000 - ETA: 0s - loss: 0.0054 - acc: 1.000 - ETA: 0s - loss: 0.0163 - acc: 0.993 - ETA: 0s - loss: 0.0147 - acc: 0.994 - 3s - loss: 0.0139 - acc: 0.9950 - val_loss: 0.3808 - val_acc: 0.9375
 Epoch 13/15
-2s - loss: 0.0109 - acc: 1.0000 - val_loss: 0.2987 - val_acc: 0.8889
+8/8 [==============================] - ETA: 1s - loss: 0.5151 - acc: 0.692 - ETA: 1s - loss: 0.3166 - acc: 0.846 - ETA: 1s - loss: 0.2146 - acc: 0.897 - ETA: 1s - loss: 0.1616 - acc: 0.923 - ETA: 0s - loss: 0.1313 - acc: 0.938 - ETA: 0s - loss: 0.4395 - acc: 0.820 - ETA: 0s - loss: 0.3771 - acc: 0.846 - 2s - loss: 0.3167 - acc: 0.8715 - val_loss: 0.1944 - val_acc: 0.8750
 Epoch 14/15
-2s - loss: 0.0173 - acc: 1.0000 - val_loss: 0.3479 - val_acc: 0.8333
+8/8 [==============================] - ETA: 2s - loss: 0.0091 - acc: 1.000 - ETA: 1s - loss: 0.0460 - acc: 0.980 - ETA: 1s - loss: 0.0578 - acc: 0.986 - ETA: 1s - loss: 0.0871 - acc: 0.980 - ETA: 0s - loss: 0.1167 - acc: 0.952 - ETA: 0s - loss: 0.1378 - acc: 0.940 - ETA: 0s - loss: 0.1315 - acc: 0.942 - 2s - loss: 0.1397 - acc: 0.9309 - val_loss: 0.2210 - val_acc: 0.9375
 Epoch 15/15
-1s - loss: 0.0194 - acc: 0.9900 - val_loss: 0.3130 - val_acc: 0.8889
+8/8 [==============================] - ETA: 2s - loss: 0.0408 - acc: 1.000 - ETA: 1s - loss: 0.0335 - acc: 1.000 - ETA: 1s - loss: 0.0902 - acc: 0.973 - ETA: 1s - loss: 0.1005 - acc: 0.970 - ETA: 0s - loss: 0.0862 - acc: 0.976 - ETA: 0s - loss: 0.0761 - acc: 0.980 - ETA: 0s - loss: 0.0662 - acc: 0.982 - 3s - loss: 0.0603 - acc: 0.9849 - val_loss: 0.2571 - val_acc: 0.9375
 </pre>
 </div>
 </div>
@@ -13765,7 +13724,7 @@ Epoch 15/15
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate_generator</span><span class="p">(</span><span class="n">val_batches</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">pickle_safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -13784,7 +13743,7 @@ Epoch 15/15
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>model accuracy: 0.888888919353
+<pre>model accuracy: 0.9375
 </pre>
 </div>
 </div>
@@ -13795,10 +13754,23 @@ Epoch 15/15
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;brandedshoes-2ndtry.hdf5&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;brandedshoes.hdf5&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;brandedshoes.hdf5&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13811,19 +13783,6 @@ Epoch 15/15
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;galaxyspiral-ecp.hdf5&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_path</span> <span class="o">=</span><span class="s1">&#39;data/brandshoes/test/&#39;</span>
 </pre></div>
 
@@ -13834,7 +13793,7 @@ Epoch 15/15
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing</span> <span class="k">import</span> <span class="n">image</span>
@@ -13885,7 +13844,7 @@ Epoch 15/15
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -13904,7 +13863,7 @@ Epoch 15/15
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predicted: [[  5.30756893e-07   9.99999523e-01]]
+<pre>Predicted: [[ 0.33529824  0.66470176]]
 </pre>
 </div>
 </div>
@@ -13915,7 +13874,7 @@ Epoch 15/15
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">preds</span><span class="p">)</span>
